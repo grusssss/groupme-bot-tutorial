@@ -77,13 +77,14 @@ const sendMessage = text => {
  *                           was sent in the bot's group.
  */
 const messageListener = message => {
+  let array = ['pay','money']
+  for (let index = 0; index < array.length; index++)
   /* Checks that the sender of the message is a user.
    * This is done so that the bot does not respond to
    * itself.
    */
   if (message['sender_type'] === 'user') {
-    // Checks if the sent message contained the string 'bot'.
-    if (message['text'].indexOf('pay'||'money') !== -1) {
+    if (message['text'].indexOf(array[index]) !== -1) {
       /* Sends a GroupMe message as this bot to the bot's
        * group, indicating its insecurity about the topic
        * of conversation.
