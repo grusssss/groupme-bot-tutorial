@@ -77,7 +77,7 @@ const sendMessage = text => {
  *                           was sent in the bot's group.
  */
 const messageListener = message => {
-  let array = ['pay','money']
+  let array = ['pay','money','direct deposit','adp']
   for (let index = 0; index < array.length; index++)
   /* Checks that the sender of the message is a user.
    * This is done so that the bot does not respond to
@@ -89,7 +89,7 @@ const messageListener = message => {
        * group, indicating its insecurity about the topic
        * of conversation.
        */
-      sendMessage('For payroll concerns, please contact Isaac')
+      sendMessage('For payroll concerns, please contact Isaac (330)-871-4646')
     }
   }
 }
