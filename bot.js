@@ -84,11 +84,10 @@ const messageListener = message => {
    * itself.
    */
   if (message['sender_type'] === 'user') {
+    if (message['text'].indexOf('payrollbot') !== 'pay') {
+      sendMessage('I am payrollbot; a line of text shamelesly copied from the internet and (painstakingly) modified by your IT Director with assistance from his little brother to inform you to voice your payroll gripes elsewhere')
+    }
     if (message['text'].indexOf(array[index]) !== -1) {
-      /* Sends a GroupMe message as this bot to the bot's
-       * group, indicating its insecurity about the topic
-       * of conversation.
-       */
       sendMessage('For payroll concerns, please contact Isaac (330)-871-4646')
     }
   }
